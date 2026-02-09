@@ -1,0 +1,140 @@
+:root {
+    --text-primary : #fff6ff;
+    --text-secondary: #6d6575;
+    --bg-primary: #a77ce4;
+    --bg-secondary: #6e35b4;
+    --nav: #4dfce0;
+    --hf-primary: #008b75;
+    --hf-secondary: #00c2a9;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+header {
+    background: linear-gradient(180deg, var(--hf-primary), var(--hf-secondary));
+    color: var(--text-primary);
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+}
+nav {
+    background-color: var(--nav);
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+nav .container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+.actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--nav);
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.actions button:hover {
+    background-color: var(--hf-primary);
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: stretch;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+.gallery h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 28px;
+}
+section {
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+h1 {
+    text-align: center;
+    font-size: 34px;
+}
+.reviews h2 {
+    text-align: center;
+    margin: auto;
+    font-size: 28px;
+}
+.reviews {
+    display: grid;
+    grid-template-columns:repeat(1, 1fr);
+    gap: 20px;
+    background-color: var(--bg-secondary);
+    padding: 30px;
+    border-radius: 10px;
+}
+article {
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.2s ease-in-out;
+}
+article:hover {
+    box-shadow: 1px 1px 1px 1px var(--text-primary);
+    transform: translateY(-3px);
+}
+footer {
+    background: linear-gradient(180deg, var(--hf-secondary), var(--hf-primary));
+    color: var(--text-primary);
+    text-align: center;
+    padding: 15px;
+}
